@@ -1,3 +1,5 @@
+//Problem 2 - Push all the zeros present in an array to the end
+
 class Solution {
     void pushZerosToEnd(int[] arr) {
         // Initialize a pointer to keep track of the position for non-zero elements
