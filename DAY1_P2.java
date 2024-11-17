@@ -1,4 +1,4 @@
-class DAY1_P2 {
+class Solution {
     void pushZerosToEnd(int[] arr) {
         // Initialize a pointer to keep track of the position for non-zero elements
         int index = 0;
