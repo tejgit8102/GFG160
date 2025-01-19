@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 4 - Find the second largest element in a given array 
+//Problem 4 - Rotate Array
 
 class Solution {
     // Function to rotate an array by d elements in counter-clockwise direction.
