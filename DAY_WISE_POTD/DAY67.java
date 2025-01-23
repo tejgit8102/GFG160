@@ -1,5 +1,5 @@
 //Module 9 - Linked List
-//Problem 2 - Day67 - Merge two sorted linked lists
+//Problem 33 - Day67 - Merge two sorted linked lists
 
 /*
   Node is defined as
