@@ -1,7 +1,6 @@
 #Module 9 - Linked List
 #Problem 2 - Day66 - Rotate a Linked List
 
-  # Your task is to complete this function
 
 '''
 
