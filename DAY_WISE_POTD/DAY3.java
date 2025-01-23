@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 3 - Reverse a given array
+//Problem 3 - Day3 - Reverse a given array
 
 class Solution {
     public static void reverseArray(int[] arr) {
