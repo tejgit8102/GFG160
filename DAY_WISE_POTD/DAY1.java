@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 1 - Find the second largest element in a given array 
+//Problem 1 - Day1 - Find the second largest element in a given array 
 
 class Solution {
     public int getSecondLargest(int[] arr) {
