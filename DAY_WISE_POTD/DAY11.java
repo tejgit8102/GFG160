@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 11 - Maximum Product Subarray
+//Problem 11 - Day11 - Maximum Product Subarray
 
 class Solution {
     // Function to find maximum product subarray
