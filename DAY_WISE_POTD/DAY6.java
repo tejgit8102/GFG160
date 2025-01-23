@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 6 - Majority Element II
+//Problem 6 - Day6 - Majority Element II
 
 class Solution {
     // Function to find the majority elements in the array
