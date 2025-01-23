@@ -1,40 +1,83 @@
 //Module 2 - Strings
-//Problem 7 - Day20 - Min Chars to Add for Palindrome
+//Problem 7 - Day20 - Strings Rotations of Each Other
 
 class Solution {
-    public static int minChar(String s) {
-        // Reverse the string
-        String reversed = new StringBuilder(s).reverse().toString();
-        // Create the concatenated string
-        String combined = s + "#" + reversed;
-        // Compute the LPS array
-        int[] lps = computeLPS(combined);
-        // Length of the longest palindromic suffix
-        int longestPalindromicSuffix = lps[lps.length - 1];
-        // Minimum characters to add
-        return s.length() - longestPalindromicSuffix;
+
+    public boolean KMPSearch(String pat, String txt) {
+        int M = pat.length();
+        int N = txt.length();
+
+        // create lps[] that will hold the longest prefix suffix
+        // values for pattern
+        int[] lps = new int[M];
+
+        // Preprocess the pattern (calculate lps[] array)
+        computeLPSArray(pat, M, lps);
+
+        int i = 0; // index for txt[]
+        int j = 0; // index for pat[]
+        while ((N - i) >= (M - j)) {
+            if (pat.charAt(j) == txt.charAt(i)) {
+                j++;
+                i++;
+            }
+
+            if (j == M) {
+                return true;
+            } else if (i < N && pat.charAt(j) != txt.charAt(i)) {
+                // mismatch after j matches
+                // Do not match lps[0..lps[j-1]] characters,
+                // they will match anyway
+                if (j != 0)
+                    j = lps[j - 1];
+                else
+                    i = i + 1;
+            }
+        }
+        return false;
     }
 
-    private static int[] computeLPS(String str) {
-        int n = str.length();
-        int[] lps = new int[n];
-        int len = 0; // Length of previous longest prefix suffix
+    // Fills lps[] for given pattern pat[0..M-1]
+    void computeLPSArray(String pat, int M, int[] lps) {
+        // length of the previous longest prefix suffix
+        int len = 0;
+
+        lps[0] = 0; // lps[0] is always 0
+
+        // the loop calculates lps[i] for i = 1 to M-1
         int i = 1;
-        
-        while (i < n) {
-            if (str.charAt(i) == str.charAt(len)) {
+        while (i < M) {
+            if (pat.charAt(i) == pat.charAt(len)) {
                 len++;
                 lps[i] = len;
                 i++;
-            } else {
+            } else { // (pat.charAt(i) != pat.charAt(len))
                 if (len != 0) {
                     len = lps[len - 1];
-                } else {
+
+                    // Also, note that we do not increment
+                    // i here
+                } else { // if (len == 0)
                     lps[i] = 0;
                     i++;
                 }
             }
         }
-        return lps;
+    }
+
+    // Function to check if two strings are rotations of each other or not.
+    public boolean areRotations(String s1, String s2) {
+        if (s1.length() != s2.length())
+            return false;
+        else {
+            // we concatenate first string to itself and check if other
+            // string occurs in it as substring. If yes, then it
+            // is rotated version and we return true else false.
+            String concatenated = s1 + s1;
+            if (KMPSearch(s2, concatenated))
+                return true;
+            else
+                return false;
+        }
     }
 }
