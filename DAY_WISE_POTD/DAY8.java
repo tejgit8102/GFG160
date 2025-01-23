@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 8 - Stock Buy and Sell – Max one Transaction Allowed
+//Problem 8 - Day8 - Stock Buy and Sell – Max one Transaction Allowed
 
 
 class Solution {
