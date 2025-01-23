@@ -1,4 +1,4 @@
-//Problem - Longest Prefix Suffix
+#Problem - Longest Prefix Suffix
 
 class Solution:
     def longestPrefixSuffix(self, s):
