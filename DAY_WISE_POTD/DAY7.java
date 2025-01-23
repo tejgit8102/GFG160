@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 7 - Stock Buy and Sell – Multiple Transaction Allowed
+//Problem 7 - Day7 - Stock Buy and Sell – Multiple Transaction Allowed
 
 
 class Solution {
