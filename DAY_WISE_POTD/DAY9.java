@@ -1,5 +1,5 @@
 //Module 1 - Arrays
-//Problem 9- Minimize the Heights II
+//Problem 9 - Day9 - Minimize the Heights II
 
 class Solution {
 
