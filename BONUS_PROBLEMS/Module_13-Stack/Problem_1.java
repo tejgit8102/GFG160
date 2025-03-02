@@ -1,3 +1,5 @@
+//Problem - Get Max from Stack
+
 class Solution {
     int maxEle;
     Stack<Integer> s;
